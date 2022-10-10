@@ -1,13 +1,14 @@
-let cash = 20
-let price = 40
-let difference = cash - price
-
-if (cash > price) {
-    console.log(`you paid extra - here's ${difference} dollars change`)
-}
-else if (cash === price) {
-    console.log("you paid the exact amount, have a nie day!")
-}
-else {
-    console.log(`not enough money - you still owe ${difference * -1} dollars`)
+for (let i = 1; i <= 20; ++i) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(`${i} -> Frontend Simplified`)
+    }
+    else if (i % 3 === 0) {
+        console.log(`${i} -> Frontend`)
+    }
+    else if (i % 5 === 0) {
+        console.log(`${i} -> Simplified`)
+    }
+    else {
+        console.log(`${i} -> ${i}`)
+    }
 }
