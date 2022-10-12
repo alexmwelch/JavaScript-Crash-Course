@@ -1,9 +1,11 @@
-function arrSum(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length -2; ++i) {
-        sum = sum + arr[i]
+function filterOutFalsy(arr) {
+    let truthyArr = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (!!arr[i] === true) {
+            truthyArr.push(arr[i]);
+        }
     }
-    return sum;
+    return truthyArr;
 }
 
-console.log(arrSum([1, 2, 3, 4, 5, 6]));
+console.log(filterOutFalsy(['banana', 'orange', 0, false]))
