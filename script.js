@@ -1,11 +1,15 @@
-function filterOutFalsy(arr) {
-    let truthyArr = [];
-    for (let i = 0; i < arr.length; ++i) {
-        if (!!arr[i] === true) {
-            truthyArr.push(arr[i]);
-        }
+function showRating(rating) {
+  let ratings = "";
+  for (let i = 0; i < Math.floor(rating); ++i) {
+    ratings += "*";
+    if (i !== Math.floor(rating) - 1) {
+        ratings += " ";
     }
-    return truthyArr;
+  }
+  if (!Number.isInteger(rating)) {
+    ratings += " .";
+  }
+  return ratings;
 }
 
-console.log(filterOutFalsy(['banana', 'orange', 0, false]))
+console.log(showRating(3.5));
