@@ -1,31 +1,9 @@
-const statusRef = document.querySelector(".status");
-
-function getStubscriptionStatus() {
-    return new Promise((resolve,reject) => {
-        setTimeout(() => {
-            resolve("FREE");
-        }, 2000);
-    })
+function arrSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length -2; ++i) {
+        sum = sum + arr[i]
+    }
+    return sum;
 }
 
-function getVideo (subscriptionStatus) {
-    return new Promise((resolve, reject) => {
-        if (subscriptionStatus === "VIP") {
-            resolve("show video")
-        }
-        else if (subscriptionStatus === "FREE") {
-            resolve("show trailer")
-        }
-        else {
-            reject("no video")
-        }
-    })
-}
-
-async function main() {
-    const status = await getStubscriptionStatus();
-    statusRef.innerHTML = status;
-    console.log(await getVideo(status))
-}
-
-main();
+console.log(arrSum([1, 2, 3, 4, 5, 6]));
