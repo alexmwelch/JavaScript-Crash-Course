@@ -1,15 +1,10 @@
-function showRating(rating) {
-  let ratings = "";
-  for (let i = 0; i < Math.floor(rating); ++i) {
-    ratings += "*";
-    if (i !== Math.floor(rating) - 1) {
-        ratings += " ";
-    }
-  }
-  if (!Number.isInteger(rating)) {
-    ratings += " .";
-  }
-  return ratings;
+function sortLowToHigh(numbers) {
+    return numbers.sort((a, b) => {
+        return b.price - a.price});
 }
 
-console.log(showRating(3.5));
+console.log(sortLowToHigh([
+    {id: 1, price: 50}, 
+    {id: 2, price: 5}, 
+    {id: 3, price: 150}
+]));
